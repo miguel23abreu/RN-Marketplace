@@ -1,7 +1,7 @@
 import React from "react";
 
 import {View, Text, StyleSheet} from "react-native"
-import { useAuth } from "../../context/auth";
+import { useAuth } from "../../../context/auth";
 
 
 export function CategoryScreen(){

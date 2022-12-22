@@ -10,7 +10,7 @@ export function Approutes(){
     return(
         <Navigator>
             <Screen name="Produtos" component={ProductScreen}/>
-            <Screen name="Cateegorias" component={CategoryScreen}/>
+            <Screen name="Categorias" component={CategoryScreen}/>
         </Navigator>
     )
 }

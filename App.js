@@ -1,11 +1,15 @@
 import { ThemeProvider } from "styled-components";
 import { SafeAreaView, View, StatusBar, StyleSheet, Text } from "react-native";
 import theme from "./src/global/style/theme";
-
-
 import { AuthProvider } from "./src/context/auth";
-import { Approutes } from "./src/routes/routes"; 
+import { Approutes } from "./src/routes/app.routes"; 
 import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { ProductScreen } from "./src/screens/Product/ProductScreen";
+import { PrincipalScreen } from "./src/screens/PrincipalScreen";
+import 'react-native-gesture-handler';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
@@ -14,7 +18,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <NavigationContainer>
           <AuthProvider>
-            <AppRoutes />
+            <PrincipalScreen />
           </AuthProvider>
         </NavigationContainer>
       </ThemeProvider>
